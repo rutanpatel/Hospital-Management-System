@@ -51,15 +51,15 @@
                         <h3 class="text-white mb-3">Opening Hours</h3>
                         <div class="d-flex justify-content-between text-white mb-3">
                             <h6 class="text-white mb-0">Mon - Fri</h6>
-                            <p class="mb-0"> 8:00am - 9:00pm</p>
+                            <p class="mb-0"> 6:00AM - 10:00PM</p>
                         </div>
                         <div class="d-flex justify-content-between text-white mb-3">
                             <h6 class="text-white mb-0">Saturday</h6>
-                            <p class="mb-0"> 8:00am - 7:00pm</p>
+                            <p class="mb-0"> 6:00AM - 10:00PM</p>
                         </div>
                         <div class="d-flex justify-content-between text-white mb-3">
                             <h6 class="text-white mb-0">Sunday</h6>
-                            <p class="mb-0"> 8:00am - 5:00pm</p>
+                            <p class="mb-0"> closed </p>
                         </div>
                         <a class="btn btn-light" href="">Appointment</a>
                     </div>
@@ -73,9 +73,11 @@
                         </div>
                         <select class="form-select bg-light border-0 mb-3" style="height: 40px;">
                             <option selected>Select A Service</option>
-                            <option value="1">Service 1</option>
-                            <option value="2">Service 2</option>
-                            <option value="3">Service 3</option>
+                            <option value="Teeth Whitening">Teeth Whitening</option>
+                            <option value="Dental Bridges">Dental Bridges</option>
+                            <option value="Dental Implants">Dental Implants</option>
+                            <option value="Cosmetic Dentistry">Cosmetic Dentistry</option>
+                            <option value="Special Teeth">Special Teeth</option>
                         </select>
                         <a class="btn btn-light" href="">Search Doctor</a>
                     </div>
@@ -96,13 +98,13 @@
     <!-- About Start -->
     <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
-            <div class="row g-5">
+            <h4 class="row g-5">
                 <div class="col-lg-7">
                     <div class="section-title mb-4">
                         <h5 class="position-relative d-inline-block text-primary text-uppercase">About Us</h5>
                         <h1 class="display-5 mb-0">The World's Best Dental Clinic That You Can Trust</h1>
                     </div>
-                    <h4 class="text-body fst-italic mb-4"> Oh God, let it be God's pain. Clita was himself, and the lorem was still in great pain
+                    <h4 class="text-body fst-italic mb-4"> Oh God, let it be God's pain. Clita was himself, and the lorem was still in great pain</h4>
                     <p class="mb-4">It was time to get rid of the vines. May the pain be long and long. I'm going to do some homework and work on them. Clita was the very thing, but it was not the work of the people. Saint Clita was in great pain for two days and a time </p>
                     <div class="row g-3">
                         <div class="col-sm-6 wow zoomIn" data-wow-delay="0.3s">
@@ -121,6 +123,7 @@
                         <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s" src="../static/img/about.jpg" style="object-fit: cover;">
                     </div>
                 </div>
+            </h4>
             </div>
         </div>
     </div>
@@ -141,22 +144,26 @@
                 <div class="col-lg-6">
                     <div class="appointment-form h-100 d-flex flex-column justify-content-center text-center p-5 wow zoomIn" data-wow-delay="0.6s">
                         <h1 class="text-white mb-4">Make Appointment</h1>
-                        <form id="appointmentForm" name="appointmentForm" action="/appointment" method="POST">
+                        <form id="appointmentForm"  action="/appointment" method="post">
                             <div class="row g-3">
                                 <div class="col-12 col-sm-6">
-                                    <select class="form-select bg-light border-0" style="height: 55px;" id="selectService" name="selectService">
+                                    <select class="form-select bg-light border-0" style="height: 55px;" id="selectService" name="service">>
                                         <option selected>Select A Service</option>
-                                        <option value="1">Service 1</option>
-                                        <option value="2">Service 2</option>
-                                        <option value="3">Service 3</option>
+                                        <option value="Teeth Whitening">Teeth Whitening</option>
+                                        <option value="Dental Bridges">Dental Bridges</option>
+                                        <option value="Dental Implants">Dental Implants</option>
+                                        <option value="Cosmetic Dentistry">Cosmetic Dentistry</option>
+                                        <option value="Special Teeth">Special Teeth</option>
                                     </select>
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                    <select class="form-select bg-light border-0" style="height: 55px;" id="selectDoctor" name="selectDoctor">
+                                    <select class="form-select bg-light border-0" style="height: 55px;" id="selectDoctor" name="doctor">
                                         <option selected>Select Doctor</option>
-                                        <option value="1">Doctor 1</option>
-                                        <option value="2">Doctor 2</option>
-                                        <option value="3">Doctor 3</option>
+                                        <option value="Dr. Vardhan">Dr. Vardhan</option>
+                                        <option value="Dr. Harshita">Dr. Harshita</option>
+                                        <option value="Dr. Harsh">Dr. Harsh</option>
+                                        <option value="Dr. Sharthak">Dr. Sharthak</option>
+                                        <option value="Dr. Rutan">Dr. Rutan</option>
                                     </select>
                                 </div>
                                 <div class="col-12 col-sm-6">
@@ -167,14 +174,14 @@
                                 </div>
                                 <div class="col-12 col-sm-6">
                                     <div class="date" id="date1" data-target-input="nearest">
-                                        <input type="date"
-                                            class="form-control bg-light border-0 datetimepicker-input"
+                                        <input type="text"
+                                            class="form-control bg-light border-0 datetimepicker-input" name="appointmentDate"
                                             placeholder="Appointment Date" data-target="#date1" data-toggle="datetimepicker" style="height: 55px;" id="appointmentDate" name="appointmentDate">
                                     </div>
                                 </div>
                                 <div class="col-12 col-sm-6">
                                     <div class="time" id="time1" data-target-input="nearest">
-                                        <input type="text" class="form-control bg-light border-0 datetimepicker-input" placeholder="Appointment Time" data-target="#time1" data-toggle="datetimepicker" style="height: 55px;" id="appointmentTime" name="appointmentTime">
+                                        <input type="text" class="form-control bg-light border-0 datetimepicker-input" name="appointmentTime" placeholder="Appointment Time" data-target="#time1" data-toggle="datetimepicker" style="height: 55px;" id="appointmentTime" name="appointmentTime">
                                     </div>
                                 </div>
                                 <div class="col-12">
