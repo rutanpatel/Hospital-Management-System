@@ -19,8 +19,8 @@ db_config = {
 email_config = {
     'smtp_server': 'smtp.gmail.com',  # SMTP server for Gmail
     'smtp_port': 587,  # Port number for TLS encryption
-    'sender_email': 'rutanmandaviya5@gmail.com',
-    'sender_password': 'pxwo hran jnig rlwm',
+    'sender_email': 'abc@gmail.com',
+    'sender_password': 'password your mail',#open mail goto google in security search add app in add name after get password if no get then msg me
 }
 
 
@@ -206,7 +206,7 @@ def sign():
             conn.close()
 
             # Send notification email to your email address
-            your_email = 'rutanmandaviya12@gmail.com'  # Replace with your email address
+            your_email = 'abc@gmail.com'  # Replace with your email address
             subject = 'New User Sign-up'
             message = f'A new user has signed up with the email address: {email}'
             send_email(your_email, subject, message)
