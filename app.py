@@ -20,7 +20,7 @@ email_config = {
     'smtp_server': 'smtp.gmail.com',  # SMTP server for Gmail
     'smtp_port': 587,  # Port number for TLS encryption
     'sender_email': 'rutanmandaviya5@gmail.com',
-    'sender_password': 'pxwo hran jnig rlwm',
+    'sender_password': 'jmge lfyn rsxb tdta',
 }
 
 
@@ -259,4 +259,4 @@ def contact():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True,port=6000)
